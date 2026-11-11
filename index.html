@@ -30,7 +30,7 @@
     --n-400:#A29D95; --n-500:#77726B; --n-600:#57534D; --n-700:#3B3834;
     --yellow-400:#FFC629;
     --text-1:var(--ace-black); --text-2:var(--n-600); --text-3:var(--n-500); --text-link:var(--ace-red-700);
-    --border-1:var(--n-200);
+    --border-1:var(--n-200); --border-2:var(--n-300); --focus-ring:#1D5FA8;
     --shadow-1:0 1px 2px rgba(10,11,14,.08),0 1px 1px rgba(10,11,14,.04);
     --shadow-2:0 4px 12px rgba(10,11,14,.10),0 1px 3px rgba(10,11,14,.06);
     --font-display:'Archivo','Helvetica Neue',Arial,sans-serif;
@@ -129,6 +129,32 @@
   .brand-logos img{display:block;height:44px;width:auto}
   .brand-logos img.bm{height:34px}
   @media (max-width:640px){.brand-logos{gap:18px 26px}.brand-logos img{height:32px}.brand-logos img.bm{height:25px}}
+
+  /* ---- Commercial ---- */
+  .comm{background:var(--ace-black);color:#fff;margin-top:56px;padding:48px 0 52px}
+  .comm .wrap{display:grid;gap:36px;grid-template-columns:minmax(0,1fr)}
+  .comm .eyebrow{color:var(--yellow-400);display:block;margin:0 0 7px}
+  .comm h2{color:#fff}
+  .comm p.intro{font:400 17px/1.55 var(--font-body);color:var(--n-300);margin:14px 0 0;max-width:54ch}
+  .terms{margin:20px 0 0;padding:0;list-style:none}
+  .terms li{display:flex;gap:10px;font:400 15.5px/1.5 var(--font-body);color:var(--n-300);padding:5px 0}
+  .terms li b{color:#fff;font-weight:600}
+  .terms svg{flex:none;color:var(--yellow-400);margin-top:3px}
+  .comm .fine{font:400 13.5px/1.5 var(--font-body);color:var(--n-400);margin:18px 0 0;max-width:52ch}
+  .form-card{background:#fff;color:var(--text-1);border-radius:8px;padding:26px}
+  .form-card h3{margin:0 0 4px}
+  .form-card .sub{font:400 14.5px/1.5 var(--font-body);color:var(--text-2);margin:0 0 18px}
+  .fgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .field{display:flex;flex-direction:column;gap:5px}
+  .field.full{grid-column:1/-1}
+  .field label{font:600 13px/1 var(--font-body);letter-spacing:.02em;color:var(--text-2);text-transform:uppercase}
+  .field input,.field select,.field textarea{font:400 16px var(--font-body);color:var(--text-1);background:#fff;border:1px solid var(--border-2);border-radius:4px;padding:0 12px;height:44px;width:100%}
+  .field textarea{height:78px;padding:10px 12px;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--focus-ring,#1D5FA8);outline-offset:1px;border-color:var(--ace-black)}
+  .btn-red{background:var(--ace-red);color:#fff;border:0;cursor:pointer;width:100%}
+  .btn-red:hover{background:var(--ace-red-700)}
+  .hp{position:absolute;left:-9999px}
+  @media (min-width:900px){.comm .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}}
 
   /* ---- FAQ ---- */
   .faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0 40px}
@@ -315,6 +341,70 @@
   </div>
 </div>
 
+<div class="comm" id="commercial">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">For contractors and agencies</span>
+      <h2>Commercial Accounts</h2>
+      <p class="intro">Charge accounts for contractors, ranches and farms, local businesses, schools and public agencies &mdash; so your crew can pick up what the job needs and you settle it once a month.</p>
+      <ul class="terms">
+        <li><svg class="svc-ico" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><b>Net 10.</b> Statements go out on the first of the month.</span></li>
+        <li><svg class="svc-ico" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><b>Charge at the counter.</b> Send anyone on your crew; we put it on the account.</span></li>
+        <li><svg class="svc-ico" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><b>Same retail pricing</b> as acehardware.com, and the same brands on the shelf.</span></li>
+        <li><svg class="svc-ico" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><b>Registered Texas CMBL vendor</b> (558654) for state and local agency purchasing.</span></li>
+      </ul>
+      <p class="fine">Accounts are subject to an application and approval. Prefer to handle it in person? Come by the counter at 105 W Sinton St or call <a href="tel:+13613644636" style="color:#fff">(361) 364-4636</a>.</p>
+    </div>
+    <div class="form-card">
+      <h3>Request an Account</h3>
+      <p class="sub">Tell us how to reach you and we'll follow up with an application.</p>
+      <form action="https://formsubmit.co/tom@acesinton.com" method="POST">
+        <input type="hidden" name="_subject" value="Commercial account request from acesinton.com">
+        <input type="hidden" name="_cc" value="ryan@acesinton.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://acesinton.com/thanks.html">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="fgrid">
+          <div class="field full">
+            <label for="f-biz">Business name</label>
+            <input id="f-biz" name="Business" type="text" required>
+          </div>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="Contact" type="text" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="Phone" type="tel" required>
+          </div>
+          <div class="field full">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="Email" type="email" required>
+          </div>
+          <div class="field full">
+            <label for="f-type">Type of account</label>
+            <select id="f-type" name="Account type">
+              <option>Contractor or trades</option>
+              <option>Ranch or farm</option>
+              <option>Local business</option>
+              <option>School, city or agency</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-notes">What do you buy most? (optional)</label>
+            <textarea id="f-notes" name="Notes"></textarea>
+          </div>
+          <div class="field full">
+            <button class="btn btn-red" type="submit">Send Request</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <section id="questions">
   <div class="wrap">
     <div class="sec-head">
@@ -325,6 +415,10 @@
       <div class="qa">
         <h3>What are your hours?</h3>
         <p>We're open six days a week &mdash; Monday through Friday 7:30 am to 5:00 pm, and Saturday 8:00 am to 12:00 pm. Saturday morning is the one to catch us on for weekend projects. Closed Sunday.</p>
+      </div>
+      <div class="qa">
+        <h3>Do you offer commercial accounts?</h3>
+        <p>Yes &mdash; for contractors, ranches, businesses and public agencies. Terms are net 10 with statements on the first of the month, and anyone on your crew can charge at the counter. <a href="#commercial">Request an account</a> or ask at the register.</p>
       </div>
       <div class="qa">
         <h3>Can I order online and pick it up in Sinton?</h3>
@@ -498,6 +592,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sinton Ace Hardware is open six days a week: Monday through Friday 7:30 am to 5:00 pm and Saturday 8:00 am to 12:00 pm. Closed Sunday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer commercial accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sinton Ace Hardware offers charge accounts for contractors, ranches and farms, local businesses, schools and public agencies. Terms are net 10 and statements are sent on the first of the month. Accounts are subject to application and approval. The store is a registered Texas CMBL vendor, number 558654."
       }
     },
     {
